@@ -4,7 +4,7 @@ from functions import get_todos, write_todos
 todos = get_todos()
 
 def add_todo():
-    todo = (st.session_state['new_todo'] + '\n').strip()
+    todo = (st.session_state['new_todo'].strip() + '\n')
     todos.append(todo)
     write_todos(todos)
     st.session_state['new_todo'] = ''
